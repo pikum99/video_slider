@@ -78,14 +78,14 @@ const ImageSlider: React.FC<{ selectedBeforeImage: string | null, selectedAfterI
           <div className="box_after" style={boxAfterStyle}>
             {selectedAfterImage && (
               selectedAfterImage.includes('video') ? 
-              <video ref={afterVideoRef} src={selectedAfterImage} style={boxAfterImageStyle} controls /> : 
+              <video ref={afterVideoRef} src={selectedAfterImage} style={boxAfterImageStyle} controls loop/> : 
               <img src={selectedAfterImage} alt="アフター" style={boxAfterImageStyle} />
             )}
           </div>
           <div className="box_before" style={boxBeforeStyle}>
             {selectedBeforeImage && (
               selectedBeforeImage.includes('video') ? 
-              <video ref={beforeVideoRef} src={selectedBeforeImage} style={boxBeforeImageStyle} controls /> : 
+              <video ref={beforeVideoRef} src={selectedBeforeImage} style={boxBeforeImageStyle} controls loop/> : 
               <img src={selectedBeforeImage} alt="ビフォー" style={boxBeforeImageStyle} />
             )}
           </div>
